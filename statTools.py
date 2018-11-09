@@ -3,4 +3,7 @@
 #retun error if non-unique mode
 
 def mean(intList):
-    return 3
+    sum = 0
+    for i in intList:
+        sum += i
+    return sum / len(intList)
