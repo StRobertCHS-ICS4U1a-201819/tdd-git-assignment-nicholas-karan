@@ -7,5 +7,8 @@ def test_mean_basic1():
 def test_mean_basic2():
     assert(mean([93, 91, 90, 96, 89, 93]) == 92)
 
-def test_mean_negatives():
-    assert(mean([-5, -8,-23,87, -30,56]) == 77/6)
+def test_mean_negative_basic():
+    assert(mean([-5, -8,-23,-87, 30,56]) == -37/6)
+
+def test_mean_unusual1():
+    assert(mean([]) == 0)
