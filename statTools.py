@@ -12,3 +12,6 @@ def mean(intList):
             sum += i
 
         return sum / len(intList)
+
+def mode(intlist):
+    return 5
