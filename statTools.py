@@ -13,5 +13,9 @@ def mean(intList):
 
         return sum / len(intList)
 
+#refactor
 def mode(intlist):
     return 5
+
+def lQ(intList):
+    return 3
