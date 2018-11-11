@@ -38,3 +38,6 @@ def test_lQ_basic2():
 
 def test_lq_basic3():
     assert(lQ([7, 9, 3, 4, 9, 11, 18, 6]) == 5)
+
+def test_lq_empty_List():
+    assert(lQ([]) == -1)
