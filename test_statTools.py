@@ -35,3 +35,6 @@ def test_lQ_basic1():
 
 def test_lQ_basic2():
     assert(lQ([12, 23, 34, 45, 46, 57, 58, 59, 67, 78, 100]) == 34)
+
+def test_lq_basic3():
+    assert(lQ([7, 9, 3, 4, 9, 11, 18, 6]) == 5)
