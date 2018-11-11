@@ -17,5 +17,14 @@ def mean(intList):
 def mode(intlist):
     return 5
 
+
 def lQ(intList):
-    return 3
+    lower_half = intList[:len(intList) // 2]
+
+
+    if len(intList) % 2 == 0:
+        value1 = lower_half[len(lower_half) // 2 - 1]
+        value2 = lower_half[len(lower_half) // 2]
+        return(value1 + value2) / 2
+    else:
+        return lower_half[len(lower_half) // 2]
