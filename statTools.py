@@ -41,3 +41,7 @@ def lQ(intList):
         return(value1 + value2) / 2
     else:
         return lower_half[len(lower_half) // 2]
+
+def uQ(intList):
+    return 8
+

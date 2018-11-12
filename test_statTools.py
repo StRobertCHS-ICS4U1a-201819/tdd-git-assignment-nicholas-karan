@@ -37,6 +37,9 @@ def test_median_basic3():
 def test_median_empty_list():
     assert(median([]) == -1)
 
+#def test_median_illegal_input():
+#   assert(median([1, 2, 3, 'f'])
+
 #lower quartile tests
 
 def test_lQ_basic1():
@@ -55,4 +58,9 @@ def test_lq_less_than4():
     assert(lQ([1,2,3]) == -1)
 
 #def test_lq_illegal_imput():
+
+#upper quartile tests
+
+def test_uq_basic1():
+    assert (uQ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 8)
 
