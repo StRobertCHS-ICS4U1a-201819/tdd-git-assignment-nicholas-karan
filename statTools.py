@@ -20,7 +20,7 @@ def mode(intlist):
 
 def lQ(intList):
 
-    if len(intList) == 0:
+    if len(intList) < 4:
         return -1
     intList.sort()
     lower_half = intList[:len(intList) // 2]

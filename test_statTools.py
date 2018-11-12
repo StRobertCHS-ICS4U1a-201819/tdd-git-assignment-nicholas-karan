@@ -41,3 +41,6 @@ def test_lq_basic3():
 
 def test_lq_empty_List():
     assert(lQ([]) == -1)
+
+def test_lq_less_than4():
+    assert(lQ([1,2,3]) == -1)
