@@ -14,6 +14,7 @@ def mean(intList):
         return sum / len(intList)
 
 def median(intList):
+    intList.sort()
     middle = len(intList) // 2
     if len(intList) % 2 == 0:
         value1 = intList[middle - 1]

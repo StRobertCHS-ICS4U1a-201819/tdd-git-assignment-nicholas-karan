@@ -31,6 +31,9 @@ def test_median_basic1():
 def test_median_basic2():
     assert(median([5, 6, 7, 8, 9, 10]) == 7.5)
 
+def test_median_basic3():
+    assert(median([22, 77, 73, 59, 95, 31, 66, 14]) == 62.5)
+
 #lower quartile tests
 
 def test_lQ_basic1():
