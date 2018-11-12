@@ -43,5 +43,11 @@ def lQ(intList):
         return lower_half[len(lower_half) // 2]
 
 def uQ(intList):
-    return 8
+    upper_half = intList[len(intList) // 2:]
+    if len(intList) % 2 == 0:
+        value1 = upper_half[len(upper_half) // 2 - 1]
+        value2 = upper_half[len(upper_half) // 2]
+        return(value1 + value2) / 2
+    else:
+        return upper_half[len(upper_half) // 2]
 
