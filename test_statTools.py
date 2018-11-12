@@ -8,25 +8,25 @@ def test_mean_basic1():
 def test_mean_basic2():
     assert(mean([93, 91, 90, 96, 89, 93]) == 92)
 
-def test_mean_negative_basic():
+def test_mean_negative():
     assert(mean([-5, -8, -23, -87, 30, 56]) == -37/6)
 
 #illegal input empty list
-def test_mean_unusual1():
-    assert(mean([]) == 0)
+def test_mean_empty_List():
+    assert(mean([]) == -1)
 
 #illegal input characters
-#def test_mean_unusual2():
-#    assert(mean(['a', 'b', 'c']) == error)
+'''
+def test_mean_illegal_input():
+    with pytest.raises(ValueError) as error:
+        mean([1, 2, 3, 'a'])
+    assert("List contains a non integer value" == str(error.value))
 
-# mode tests
+'''
+#median tests
 
-def test_mode_basic1():
-    assert(mode([1, 2, 3, 4, 5, 5, 6, 7, 8, 9]) == 5)
-
-#def test_mode_basic2():
-#    assert(mode([10,30,0,30,46,23]) == 30)
-
+def test_median_basic1():
+    assert(median([1, 2, 3, 4, 5, 6, 7]) == 4)
 
 #lower quartile tests
 
@@ -44,3 +44,6 @@ def test_lq_empty_List():
 
 def test_lq_less_than4():
     assert(lQ([1,2,3]) == -1)
+
+#def test_lq_illegal_imput():
+
