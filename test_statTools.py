@@ -67,3 +67,6 @@ def test_uq_basic1():
 def test_uq_basic2():
     assert(uQ([1, 1, 3, 4, 6, 7, 7, 9, 10, 11, 14, 17]) == 10.5)
 
+def test_uq_basic3():
+    assert(uQ([7, 9, 3, 4, 9, 11, 18, 6]) == 10)
+
