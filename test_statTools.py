@@ -73,3 +73,6 @@ def test_uq_basic3():
 def test_uq_empty_list():
     assert(uQ([]) == -1)
 
+def test_uq_less_than4():
+    assert(uQ([1,2,3]) == -1)
+

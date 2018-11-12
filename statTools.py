@@ -43,7 +43,7 @@ def lQ(intList):
         return lower_half[len(lower_half) // 2]
 
 def uQ(intList):
-    if len(intList) == 0:
+    if len(intList) < 4:
         return -1
 
     intList.sort()
