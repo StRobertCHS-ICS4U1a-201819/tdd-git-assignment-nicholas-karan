@@ -70,3 +70,6 @@ def test_uq_basic2():
 def test_uq_basic3():
     assert(uQ([7, 9, 3, 4, 9, 11, 18, 6]) == 10)
 
+def test_uq_empty_list():
+    assert(uQ([]) == -1)
+
