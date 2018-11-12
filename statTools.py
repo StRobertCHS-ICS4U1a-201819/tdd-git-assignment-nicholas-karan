@@ -14,7 +14,13 @@ def mean(intList):
         return sum / len(intList)
 
 def median(intList):
-    return 4
+    middle = len(intList) // 2
+    if len(intList) % 2 == 0:
+        value1 = intList[middle - 1]
+        value2 = intList[middle]
+        return (value1 + value2) / 2
+    else:
+        return intList[middle]
 
 def lQ(intList):
 

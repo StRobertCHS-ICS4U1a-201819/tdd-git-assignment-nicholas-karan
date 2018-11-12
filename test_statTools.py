@@ -28,6 +28,9 @@ def test_mean_illegal_input():
 def test_median_basic1():
     assert(median([1, 2, 3, 4, 5, 6, 7]) == 4)
 
+def test_median_basic2():
+    assert(median([5, 6, 7, 8, 9, 10]) == 7.5)
+
 #lower quartile tests
 
 def test_lQ_basic1():
