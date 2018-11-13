@@ -13,16 +13,17 @@ def test_mean_negative():
 
 #illegal input empty list
 def test_mean_empty_List():
-    assert(mean([]) == -1)
+    with pytest.raises(ValueError) as error:
+        mean([])
+    assert("An empty list was provided" == str(error.value))
 
 #illegal input characters
-'''
+
 def test_mean_illegal_input():
-    with pytest.raises(ValueError) as error:
+    with pytest.raises(TypeError) as error:
         mean([1, 2, 3, 'a'])
     assert("List contains a non integer value" == str(error.value))
 
-'''
 #median tests
 
 def test_median_basic1():

@@ -4,15 +4,16 @@
 
 #refactor this later
 def mean(intList):
-    sum = 0
     if len(intList) == 0:
-        return -1
-    else:
+        raise ValueError("An empty list was provided")
+    try:
+        total = 0
         for i in intList:
-            sum += i
+            total += i
 
-        return sum / len(intList)
-
+        return total / len(intList)
+    except TypeError:
+        raise TypeError("List contains a non integer value")
 
 def median(intList):
     if len(intList) == 0:
