@@ -17,7 +17,7 @@ def mean(intList):
 
 def median(intList):
     if len(intList) == 0:
-        return -1
+        raise ValueError("An empty list was provided")
 
     intList.sort()
     middle = len(intList) // 2

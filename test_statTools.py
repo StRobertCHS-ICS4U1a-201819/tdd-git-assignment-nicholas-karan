@@ -24,6 +24,8 @@ def test_mean_illegal_input():
         mean([1, 2, 3, 'a'])
     assert("List contains a non integer value" == str(error.value))
 
+#not a list
+
 #median tests
 
 def test_median_basic1():
@@ -36,7 +38,9 @@ def test_median_basic3():
     assert(median([22, 77, 73, 59, 95, 31, 66, 14]) == 62.5)
 
 def test_median_empty_list():
-    assert(median([]) == -1)
+    with pytest.raises(ValueError) as error:
+        median([])
+    assert("An empty list was provided" == str(error.value))
 
 #def test_median_illegal_input():
 #   assert(median([1, 2, 3, 'f'])
