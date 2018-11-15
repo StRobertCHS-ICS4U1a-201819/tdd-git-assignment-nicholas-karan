@@ -38,3 +38,23 @@ def test_range_basic2():
 
 def test_range_basic3():
     assert(func_range([1, 1, 14, 53]) == 52)
+
+# FUNCTION: VARIANCE
+
+def test_variance_basic():
+    assert(variance([1, 2, 3]) == 1)
+
+def test_variance_basic2():
+    assert(variance([1, 2, 4, 5, 7, 5, 4, 3]) == -3)
+
+def test_variance_basic3():
+    assert(variance([2, 3, 5, 5, 3, 4, 5, 6, 3] == -4))
+
+def test_variance_empty():
+    assert(variance([]) == -1)
+
+def test_variance_oneType():
+    assert variance([-8, -8, -8, -8] == 8)
+
+def test_variance_oneValue():
+    assert(variance([3]) == 0)

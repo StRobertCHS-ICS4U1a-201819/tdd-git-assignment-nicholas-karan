@@ -35,3 +35,9 @@ def func_range(numList):
         return the_range
     except:
         return -1
+
+def variance(numList):
+    try:
+        return 0
+    except:
+        return -1
