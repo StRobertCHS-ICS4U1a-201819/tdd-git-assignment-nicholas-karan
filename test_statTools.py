@@ -11,20 +11,20 @@ def test_mean_basic2():
 def test_mean_negative():
     assert(mean([-5, -8, -23, -87, 30, 56]) == -37/6)
 
-#illegal input empty list
+def test_mean_negative2():
+    assert(mean([-9, -8, -5, -3, -1]) == -5.2)
+
 def test_mean_empty_List():
     with pytest.raises(ValueError) as error:
         mean([])
     assert("An empty list was provided" == str(error.value))
-
-#illegal input characters
 
 def test_mean_illegal_input():
     with pytest.raises(TypeError) as error:
         mean([1, 2, 3, 'a'])
     assert("List contains a non integer value" == str(error.value))
 
-#not a list
+
 
 #median tests
 
