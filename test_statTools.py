@@ -42,8 +42,10 @@ def test_median_empty_list():
         median([])
     assert("An empty list was provided" == str(error.value))
 
-#def test_median_illegal_input():
-#   assert(median([1, 2, 3, 'f'])
+def test_median_illegal_input():
+    with pytest.raises(TypeError) as error:
+        median([1, 2, 3, 'a'])
+    assert("List contains a non integer value" == str(error.value))
 
 #lower quartile tests
 
