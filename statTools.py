@@ -16,17 +16,14 @@ def mean(intList):
         raise TypeError("List contains a non integer value")
 
 def median(intList):
+    intList.sort()
+
     if len(intList) == 0:
         raise ValueError("An empty list was provided")
-
-    intList.sort()
-    middle = len(intList) // 2
-    if len(intList) % 2 == 0:
-        value1 = intList[middle - 1]
-        value2 = intList[middle]
-        return (value1 + value2) / 2
+    elif len(intList) % 2 == 0:
+        return (intList[(len(intList) // 2) - 1] + intList[len(intList) // 2]) / 2
     else:
-        return intList[middle]
+        return intList[len(intList) // 2]
 
 def lQ(intList):
 
