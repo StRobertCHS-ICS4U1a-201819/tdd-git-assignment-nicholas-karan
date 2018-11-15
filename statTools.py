@@ -1,3 +1,4 @@
+import math
 def mode(numList):
     try:
         if len(numList) == 1:
@@ -61,6 +62,7 @@ def variance(numList):
 
 def stnd_dev(numList):
     try:
-        return 0
+        # return square root of variance rounded by 3 digits
+        return round(math.sqrt(variance(numList)), 3)
     except:
-        return 1
+        return -1

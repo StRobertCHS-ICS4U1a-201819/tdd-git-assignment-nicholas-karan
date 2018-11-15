@@ -19,7 +19,7 @@ def test_mode_oneType():
     assert(mode([1,1,1,1]) == [1])
 
 def test_mode_finalTest():
-    assert(mode([5, 4, 3 ,5 ,6 ,7, 4, 3, 4,5, 6, 4 ,43 ,23 ,4 ,45, 64, 3 ,4 ]) == [4])
+    assert(mode([5, 4, 3 ,5 ,6 ,7, 4, 3, 4, 5, 6, 4 ,43 ,23 ,4 ,45, 64, 3 ,4]) == [4])
 
 # FUNCTION: RANGE
 def test_range_basic():
@@ -63,13 +63,13 @@ def test_variance_oneValue():
 # FUNCTION: STANDARD DEVIATION
 
 def test_stndDev_basic():
-    assert(stnd_dev([1, 2, 3]) == math.sqrt(0.6666666666666666))
+    assert(stnd_dev([1, 2, 3]) == 0.816)
 
 def test_stndDev_basic2():
-    assert(stnd_dev([1, 2, 4, 5]) == math.sqrt(2.5))
+    assert(stnd_dev([1, 2, 4, 5]) == 1.581)
 
 def test_stndDev_basic3():
-    assert(stnd_dev([2, 3, 5, 5, 3, 4, 5, 6, 3]) == math.sqrt(1.555555555))
+    assert(stnd_dev([2, 3, 5, 5, 3, 4, 5, 6, 3]) == 1.247)
 
 def test_stndDev_empty():
     assert(stnd_dev([]) == -1)
