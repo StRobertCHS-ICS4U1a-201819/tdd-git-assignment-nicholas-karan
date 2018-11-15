@@ -37,6 +37,9 @@ def test_median_basic2():
 def test_median_basic3():
     assert(median([22, 77, 73, 59, 95, 31, 66, 14]) == 62.5)
 
+def test_median_negatives():
+    assert(median([-9, -8, -5, -3, -1]) == -5)
+
 def test_median_empty_list():
     with pytest.raises(ValueError) as error:
         median([])
