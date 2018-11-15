@@ -30,6 +30,8 @@ def mode(numList):
 
 def func_range(numList):
     try:
-        return 0
+        the_range = max(numList) - min(numList)
+        # get the maximum minus the minimum
+        return the_range
     except:
         return -1
