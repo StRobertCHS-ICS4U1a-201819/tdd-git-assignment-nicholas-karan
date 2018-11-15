@@ -27,3 +27,9 @@ def mode(numList):
                 return mode
     except:
         return -1
+
+def func_range(numList):
+    try:
+        return 0
+    except:
+        return -1
