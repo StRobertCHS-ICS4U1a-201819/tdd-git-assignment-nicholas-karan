@@ -2,7 +2,7 @@ import math
 def mode(numList):
     try:
         if len(numList) == 1:
-            return numList
+            raise ValueError("no mode if there is only one value")
         else:
             counter_list = []
             for i in range(len(numList)):
@@ -26,43 +26,46 @@ def mode(numList):
                     # remove duplicates
                         mode.append(x)
                 return mode
-    except:
-        return -1
+    except TypeError:
+        raise TypeError("list contains non integer values")
+
 
 def func_range(numList):
     try:
+        if numList == 0:
+            raise ValueError("numList contains zero to one ")
         the_range = max(numList) - min(numList)
         # get the maximum minus the minimum
         return the_range
-    except:
-        return -1
+    except TypeError:
+        raise TypeError("list contains non integer values")
+
 
 def variance(numList):
+    if len(numList) <= 1:
+        raise ValueError("no variance if there is only one value")
     try:
-        if len(numList) <= 1:
-            return -1
-        else:
-            mean = sum(numList)/len(numList)
-            # get the mean to use later
-            var = 0
-            dev = []
-            #need these for later
-            for i in range (len(numList)):
-                var = (numList[i] - mean) ** 2
-                dev.append(var)
-                # shuffle through values and find individual variation
+        mean = sum(numList)/len(numList)
+        # get the mean to use later
+        dev = []
+        #need these for later
+        for i in range (len(numList)):
+            var = (numList[i] - mean) ** 2
+            dev.append(var)
+            # shuffle through values and find individual variation
             # find total variation
-            avg_var = sum(dev)/len(dev)
-            # average of total variation
-            return (avg_var)
+        avg_var = sum(dev)/len(dev)
+        # average of total variation
+        return (avg_var)
     #give back final variance
 
-    except:
-        return -1
+    except TypeError:
+        raise TypeError("list contains non integer values")
 
 def stnd_dev(numList):
     try:
+
         # return square root of variance rounded by 3 digits
         return round(math.sqrt(variance(numList)), 3)
-    except:
-        return -1
+    except TypeError:
+        raise TypeError("list contains non integer values")

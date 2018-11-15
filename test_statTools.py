@@ -9,8 +9,8 @@ def test_mode_basic():
 def test_mode_emptyList():
     assert(mode([]) == -1)
 
-def test_mode_basic3():
-    assert(mode([1, 1, 2, 3, 4, 5, 5, 5, 5, 5]) == [5])
+def test_mode_nonValue():
+    assert(mode([1, 1, 2, 3, 4, 5, "b", 5, 5, 5]) == "list contains non integer values")
 
 def test_mode_OneValue():
     assert(mode([1]) == [1])
@@ -37,8 +37,8 @@ def test_range_oneType():
 def test_range_basic2():
     assert(func_range([1, 3, 4, 5, 5, 91]) == 90)
 
-def test_range_basic3():
-    assert(func_range([1, 1, 14, 53]) == 52)
+def test_range_nonValue():
+    assert(func_range([1, 1, "yeet", 53]) == "list contains non integer values")
 
 # FUNCTION: VARIANCE
 
@@ -48,8 +48,8 @@ def test_variance_basic():
 def test_variance_basic2():
     assert(variance([1, 2, 4, 5]) == 2.5)
 
-def test_variance_basic3():
-    assert(variance([2, 3, 5, 5, 3, 4, 5, 6, 3] == 1.555555555))
+def test_variance_nonValue():
+    assert(variance([2, 3, 5, 5, 3, 4, 5, 6, "a"] == ""))
 
 def test_variance_empty():
     assert(variance([]) == -1)
@@ -65,8 +65,8 @@ def test_variance_oneValue():
 def test_stndDev_basic():
     assert(stnd_dev([1, 2, 3]) == 0.816)
 
-def test_stndDev_basic2():
-    assert(stnd_dev([1, 2, 4, 5]) == 1.581)
+def test_stndDev_nonValue():
+    assert(stnd_dev([1, 2, 4, "Code"]) == "list contains non integer values")
 
 def test_stndDev_basic3():
     assert(stnd_dev([2, 3, 5, 5, 3, 4, 5, 6, 3]) == 1.247)
