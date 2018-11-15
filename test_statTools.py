@@ -67,6 +67,11 @@ def test_lq_empty_List():
 def test_lq_less_than4():
     assert(lQ([1,2,3]) == -1)
 
+def test_lq_illegal_input():
+    with pytest.raises(TypeError) as error:
+        lQ([1, 2, 3, 'a'])
+    assert("List contains a non integer value" == str(error.value))
+
 #def test_lq_illegal_imput():
 
 #upper quartile tests

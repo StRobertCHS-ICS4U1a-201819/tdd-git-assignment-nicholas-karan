@@ -1,6 +1,5 @@
 
 #mean, median, lower quartile, upper quartile
-#retun error if non-unique mode
 
 #refactor this later
 def mean(intList):
@@ -15,6 +14,7 @@ def mean(intList):
     except TypeError:
         raise TypeError("List contains a non integer value")
 
+
 def median(intList):
     try:
         intList.sort()
@@ -27,20 +27,24 @@ def median(intList):
             return intList[len(intList) // 2]
     except TypeError:
         raise TypeError("List contains a non integer value")
+
+
 def lQ(intList):
+    try:
+        if len(intList) < 4:
+            return -1
+        intList.sort()
+        lower_half = intList[:len(intList) // 2]
 
-    if len(intList) < 4:
-        return -1
-    intList.sort()
-    lower_half = intList[:len(intList) // 2]
 
-
-    if len(intList) % 2 == 0:
-        value1 = lower_half[len(lower_half) // 2 - 1]
-        value2 = lower_half[len(lower_half) // 2]
-        return(value1 + value2) / 2
-    else:
-        return lower_half[len(lower_half) // 2]
+        if len(intList) % 2 == 0:
+            value1 = lower_half[len(lower_half) // 2 - 1]
+            value2 = lower_half[len(lower_half) // 2]
+            return(value1 + value2) / 2
+        else:
+            return lower_half[len(lower_half) // 2]
+    except TypeError:
+        raise TypeError("List contains a non integer value")
 
 def uQ(intList):
     if len(intList) < 4:
