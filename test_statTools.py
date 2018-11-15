@@ -91,3 +91,8 @@ def test_uq_empty_list():
 def test_uq_less_than4():
     assert(uQ([1,2,3]) == -1)
 
+def test_uq_illegal_input():
+    with pytest.raises(TypeError) as error:
+        uQ([1, 2, 3, 'a'])
+    assert("List contains a non integer value" == str(error.value))
+
