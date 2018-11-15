@@ -58,3 +58,9 @@ def variance(numList):
 
     except:
         return -1
+
+def stnd_dev(numList):
+    try:
+        return 0
+    except:
+        return 1

@@ -1,4 +1,5 @@
 import pytest
+import math
 # FUNCTION: MODE
 from statTools import *
 
@@ -58,3 +59,23 @@ def test_variance_oneType():
 
 def test_variance_oneValue():
     assert(variance([3]) == -1)
+
+# FUNCTION: STANDARD DEVIATION
+
+def test_stndDev_basic():
+    assert(stnd_dev([1, 2, 3]) == math.sqrt(0.6666666666666666))
+
+def test_stndDev_basic2():
+    assert(stnd_dev([1, 2, 4, 5]) == math.sqrt(2.5))
+
+def test_stndDev_basic3():
+    assert(stnd_dev([2, 3, 5, 5, 3, 4, 5, 6, 3]) == math.sqrt(1.555555555))
+
+def test_stndDev_empty():
+    assert(stnd_dev([]) == -1)
+
+def test_stndDev_oneType():
+    assert(stnd_dev([-8, -8, -8, -8]) == 0)
+
+def test_stndDev_oneValue():
+    assert(stnd_dev([3]) == -1)
