@@ -38,6 +38,23 @@ def func_range(numList):
 
 def variance(numList):
     try:
-        return 0
+        if len(numList) <= 1:
+            return -1
+        else:
+            mean = sum(numList)/len(numList)
+            # get the mean to use later
+            var = 0
+            dev = []
+            #need these for later
+            for i in range (len(numList)):
+                var = (numList[i] - mean) ** 2
+                dev.append(var)
+                # shuffle through values and find individual variation
+            # find total variation
+            avg_var = sum(dev)/len(dev)
+            # average of total variation
+            return (avg_var)
+    #give back final variance
+
     except:
         return -1

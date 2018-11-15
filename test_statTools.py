@@ -42,19 +42,19 @@ def test_range_basic3():
 # FUNCTION: VARIANCE
 
 def test_variance_basic():
-    assert(variance([1, 2, 3]) == 1)
+    assert(variance([1, 2, 3]) == 0.6666666666666666)
 
 def test_variance_basic2():
-    assert(variance([1, 2, 4, 5, 7, 5, 4, 3]) == -3)
+    assert(variance([1, 2, 4, 5]) == 2.5)
 
 def test_variance_basic3():
-    assert(variance([2, 3, 5, 5, 3, 4, 5, 6, 3] == -4))
+    assert(variance([2, 3, 5, 5, 3, 4, 5, 6, 3] == 1.555555555))
 
 def test_variance_empty():
     assert(variance([]) == -1)
 
 def test_variance_oneType():
-    assert variance([-8, -8, -8, -8] == 8)
+    assert variance([-8, -8, -8, -8] == 0)
 
 def test_variance_oneValue():
-    assert(variance([3]) == 0)
+    assert(variance([3]) == -1)
