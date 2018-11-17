@@ -13,21 +13,11 @@ Created:    08/11/2018
 
 
 def mean(int_list):
-
-    """
-        Returns the mean of the inputted list
-        :param int_list: list of values
-        :return: mean
-        Author: Gin.N
-    """
     if len(int_list) == 0:
-        raise ValueError("An empty list was provided")
+        raise ValueError ("An empty list was provided")
     try:
-        total = 0
-        for i in int_list:
-            total += i
 
-        return total / len(int_list)
+        return sum(int_list) / len(int_list)
     except TypeError:
         raise TypeError("List contains a non integer value")
 
