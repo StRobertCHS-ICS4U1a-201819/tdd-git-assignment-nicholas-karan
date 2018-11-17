@@ -4,7 +4,7 @@ Name:		test_statTools.py
 
 Purpose:    Contains test cases for fucntions of Measures of Central Tendency and Measures of Spread
 
-Author:		Gin. N
+Author:		Gin.N, Polobotu.K
 
 Created:    08/11/2018
 ------------------------------------------------------------------------------
@@ -13,7 +13,7 @@ Created:    08/11/2018
 import pytest
 from statTools import *
 
-# mean tests
+# Mean tests
 
 
 def test_mean_basic1():
