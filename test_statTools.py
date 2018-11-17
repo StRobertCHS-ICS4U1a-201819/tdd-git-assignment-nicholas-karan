@@ -43,7 +43,7 @@ def test_mean_illegal_input():
         mean([1, 2, 3, 'a'])
     assert("List contains a non integer value" == str(error.value))
 
-# median tests
+# Median tests
 
 
 def test_median_basic1():
@@ -73,7 +73,7 @@ def test_median_illegal_input():
         median([1, 2, 3, 'a'])
     assert("List contains a non integer value" == str(error.value))
 
-# lower quartile tests
+# Lower quartile tests
 
 
 def test_lower_quartile_basic1():
@@ -102,7 +102,7 @@ def test_lower_quartile_illegal_input():
     assert("List contains a non integer value" == str(error.value))
 
 
-# upper quartile tests
+# Upper quartile tests
 
 def test_upper_quartile_basic1():
     assert (upper_quartile([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == 7.5)
