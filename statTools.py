@@ -13,6 +13,13 @@ Created:    08/11/2018
 
 
 def mean(int_list):
+
+    """
+        Returns the mean of the inputted list
+        :param int_list: list of values
+        :return: mean
+        Author: Gin.N
+    """
     if len(int_list) == 0:
         raise ValueError("An empty list was provided")
     try:
@@ -26,7 +33,12 @@ def mean(int_list):
 
 
 def median(int_list):
-
+    """
+           Returns the median of the inputted list
+           :param int_list: list of values
+           :return: median
+           Author: Gin.N
+    """
     # Check to see if the list contains any non-integer values
     try:
         # Sort the list
@@ -47,6 +59,12 @@ def median(int_list):
 
 
 def lower_quartile(int_list):
+    """
+           Returns the lower quartile of the inputted list
+           :param int_list: list of values
+           :return: int, lower quartile
+           Author: Gin.N
+    """
 
     # Check to see if the list contains any non-integer values
     try:
@@ -72,6 +90,12 @@ def lower_quartile(int_list):
 
 
 def upper_quartile(int_list):
+    """
+           Returns the upper quartile of the inputted list
+           :param int_list: list of values
+           :return: int, upper quartile
+           Author: Gin.N
+    """
 
     # Check to see if the list contains any non-integer values
     try:
