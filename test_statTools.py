@@ -36,7 +36,7 @@ def test_range_empty():
     assert("max () arg is an empty sequence" == str(error.value))
 
 def test_range_oneType():
-    assert(func_range([1, 1, 1, 1] == 0))
+    assert(func_range([1, 1, 1, 1]) == 0)
 
 def test_range_basic2():
     assert(func_range([1, 3, 4, 5, 5, 91]) == 90)
@@ -64,8 +64,8 @@ def test_variance_empty():
         variance([])
     assert("no variance if there are one or less values") == str(error.value)
 
-def test_variance_oneType():
-    assert variance([-8, -8, -8, -8] == 0)
+def test_variance_negatives():
+    assert (variance([-8, -8, -8, -8]) == 0)
 
 def test_variance_oneValue():
     with pytest.raises(ValueError) as error:

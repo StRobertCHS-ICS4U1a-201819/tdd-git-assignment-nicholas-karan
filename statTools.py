@@ -42,6 +42,7 @@ def func_range(numList):
         if len(numList) == 0:
             raise ValueError("max () arg is an empty sequence")
         else:
+
             numList.sort()
             # sort it
             the_range = numList[len(numList) - 1] - numList[0]
