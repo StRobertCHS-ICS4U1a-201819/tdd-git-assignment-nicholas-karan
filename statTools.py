@@ -48,7 +48,7 @@ def median(int_list):
         if len(int_list) == 0:
             raise ValueError("An empty list was provided")
 
-         # Check if the list has an even or odd length to determine the median
+        # Check if the list has an even or odd length to determine the median
         elif len(int_list) % 2 == 0:
             return (int_list[(len(int_list) // 2) - 1] + int_list[len(int_list) // 2]) / 2
         else:
