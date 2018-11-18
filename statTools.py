@@ -63,23 +63,24 @@ def mode(numList):
 
 def func_range(numList):
     """
-            Returns the range of a function
-            :param numList: list of the numbers
+            Returns the range of a function, maximum minus minimum
+            :param numList: list of numbers that we draw our data from
             :return: range
     """
-    try:
-        #if theres nothing given, empty sequence
-        if len(numList) == 0:
-            raise ValueError("max () arg is an empty sequence")
-        else:
 
-            numList.sort()
-            # sort it
-            the_range = numList[len(numList) - 1] - numList[0]
-            # get the maximum minus the minimum
-            return the_range
-    except TypeError:
-        raise TypeError("list contains non integer values")
+    if len(numList) == 0:
+        # if there is no values, no range, raise an error
+        raise ValueError ("no values given")
+    else:
+
+        try:
+            #get the range
+            return (max(numList) - min(numList))
+
+        except TypeError:
+            #raise an error if we are given a string
+            raise TypeError("cannot take in strings")
+
 
 
 def variance(numList):

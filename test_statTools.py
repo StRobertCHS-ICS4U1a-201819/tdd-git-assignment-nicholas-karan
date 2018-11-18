@@ -40,24 +40,24 @@ def test_mode_finalTest():
 def test_range_basic():
     assert(func_range([0, 3]) == 3)
 
-def test_range_oneValue():
-    assert(func_range([5]) == 0)
-
-def test_range_empty():
-    with pytest.raises(ValueError) as error:
-        func_range([])
-    assert("max () arg is an empty sequence" == str(error.value))
+def test_range_basic2():
+    assert(func_range([1, 3, 4, 5, 5, 91]) == 90)
 
 def test_range_oneType():
     assert(func_range([1, 1, 1, 1]) == 0)
 
-def test_range_basic2():
-    assert(func_range([1, 3, 4, 5, 5, 91]) == 90)
+def test_range_empty():
+    with pytest.raises(ValueError) as error:
+        func_range([])
+    assert("no values given") == str(error.value)
 
 def test_range_nonValue():
     with pytest.raises(TypeError) as error:
-        func_range([1, 1, "yeet", 53])
-    assert("list contains non integer values") == str(error.value)
+        func_range([1, 2, 4, "nope"])
+    assert("cannot take in strings") == str(error.value)
+
+def test_range_oneValue():
+        assert(func_range([5]) == 0)
 
 # FUNCTION: VARIANCE
 
