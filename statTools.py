@@ -1,14 +1,38 @@
+"""
+-----------------------------------------------------------------------
+Name:               statTools.py
+
+Purpose: Contains functions for Measures of Central Tendency and Measures
+         Includes: mode, range, variance, standard deviation
+
+Author:             Polobotu.K, Gin.N
+
+Created: 08/11/2018
+-----------------------------------------------------------------------
+"""
+
+
 import math
 def mode(numList):
+
+    """
+
+            Returns the mode of the imputted list
+            :param numList: list of values
+            :return: mode
+    """
+    #ensure you have no forms of strings in your list
     for i in range (len(numList)):
         if isinstance(numList[i], str) == True:
             raise TypeError("list contains non integer values")
         else:
             i += 1
+            #if all numbers, procceed
     try:
         for i in range(len(numList)):
             if len(numList) <= 1:
                 return "no Mode"
+            # if there is one or fewer elements, no mode
             else:
                 counter_list = []
                 for i in range(len(numList)):
@@ -38,7 +62,13 @@ def mode(numList):
 
 
 def func_range(numList):
+    """
+            Returns the range of a function
+            :param numList: list of the numbers
+            :return: range
+    """
     try:
+        #if theres nothing given, empty sequence
         if len(numList) == 0:
             raise ValueError("max () arg is an empty sequence")
         else:
@@ -53,7 +83,14 @@ def func_range(numList):
 
 
 def variance(numList):
+    """
+
+            Provides the variance from a set of numbers
+            :param numList: list of numbers given
+            :return: variance
+    """
     if len(numList) <= 1:
+        # if there are one or fewer terms, no variance
         raise ValueError("no variance if there are one or less values")
     else:
         try:
@@ -75,10 +112,16 @@ def variance(numList):
             raise TypeError("list contains non integer values")
 
 def stnd_dev(numList):
-        if len(numList) <= 1:
-            raise ValueError("list contains one or less elements")
-        try:
-            # return square root of variance rounded by 3 digits
-            return round(math.sqrt(variance(numList)), 3)
-        except TypeError:
-            raise TypeError("list contains non integer values")
+    """
+            returns the standard deviation(square root) of variance
+            :param numList: list of numbers provided
+            :return: standard deviation
+    """
+    if len(numList) <= 1:
+        raise ValueError("list contains one or less elements")
+    # if there are one or fewer elements, no standard deviation
+    try:
+        # return square root of variance rounded by 3 digits
+        return round(math.sqrt(variance(numList)), 3)
+    except TypeError:
+        raise TypeError("list contains non integer values")

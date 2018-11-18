@@ -1,3 +1,16 @@
+"""
+-------------------------------------------------------------------------
+Name:               test_statTools.py
+
+Purpose:       Contains test cases for functions of Measures of Central Tendancy
+
+Author:             Polobotu.K, Gin.N
+
+Created:       08/11/2018
+-------------------------------------------------------------------------
+"""
+
+
 import pytest
 import math
 # FUNCTION: MODE
